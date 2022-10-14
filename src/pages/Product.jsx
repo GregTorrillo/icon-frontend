@@ -149,7 +149,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await publicRequest.get("https://icon-api.onrender.com/products/find/" + id);
+        const res = await publicRequest.get("/products/find/" + id);
         setProduct(res.data);
       } catch {}
     };
