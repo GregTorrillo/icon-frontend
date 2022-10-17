@@ -22,14 +22,15 @@ const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
   background-color: white;
-  ${mobile({ width: "75%" })}
   ${tablet({ width: "75%" })}
+  ${mobile({ width: "75%" })}
 `;
 
 const Title = styled.h1`
   font-size: 24px;
   font-weight: 500;
   ${tablet({ paddingBottom: "10px" })}
+  ${mobile({ fontSize: "20px" })}
 `;
 
 const Form = styled.form`
@@ -44,11 +45,13 @@ const Input = styled.input`
   margin: 20px 10px 0px 0px;
   padding: 10px;
   ${tablet({ padding: "20px"})}
+  ${mobile({ padding: "10px"})}
 `;
 
 const Agreement = styled.span`
   font-size: 12px;
   margin: 20px 0px;
+  ${mobile({ fontSize: "10px", margin: "10px 0px"})}
 `;
 
 const Button = styled.button`
@@ -60,6 +63,7 @@ const Button = styled.button`
   font-weight: 500;
   color: white;
   cursor: pointer;
+  ${mobile({ fontSize: "16px", padding: "10px 15px"})}
 `;
 
 const Register = () => {

@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "0px"})}
+  ${mobile({ padding: "5px 20px 0px 0px"})}
 `;
 
 const Left = styled.div`

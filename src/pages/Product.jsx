@@ -20,8 +20,8 @@ const Wrapper = styled.div`
   padding: 50px;
   display: flex;
   background-color: #F5F5F5;
-  ${mobile({ padding: "10px", flexDirection: "column" })}
   ${tablet({ padding: "10px", flexDirection: "column" })}
+  ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 
 const ImgContainer = styled.div`
@@ -32,30 +32,30 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
-  ${mobile({ height: "40vh" })}
   ${tablet({ height: "40vh" })}
+  ${mobile({ height: "40vh" })}
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding-top: 50px;
-  ${mobile({ padding: "10px" })}
   ${tablet({ padding: "0px", textAlign: "center" })}
+  ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
   font-size: 50px;
   font-weight: 500;
-  ${mobile({ fontSize: "24px" })}
   ${laptop({ fontSize: "32px" })}
+  ${mobile({ fontSize: "24px" })}
 `;
 
 const Desc = styled.p`
   font-size: 20px;
   padding: 20px 150px 20px 0px;
-  ${mobile({ fontSize: "16px", padding: "20px 0px" })}
-  ${tablet({ padding: "40px", textAlign: "center" })}
   ${laptop({ padding: "20px 0px", fontSize: "18px" })}
+  ${tablet({ padding: "40px", textAlign: "center" })}
+  ${mobile({ fontSize: "16px", padding: "20px 0px" })}
 `;
 
 const Price = styled.span`
@@ -68,9 +68,9 @@ const FilterContainer = styled.div`
   margin: 30px 0px;
   display: flex;
   justify-content: space-between;
-  ${mobile({ width: "100%" })}
-  ${tablet({ width: "100%", justifyContent: "space-around" })}
   ${laptop({ width: "100%"})}
+  ${tablet({ width: "100%", justifyContent: "space-around" })}
+  ${mobile({ width: "100%" })}
 `;
 
 const Filter = styled.div`
@@ -104,9 +104,9 @@ const AddContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ width: "100%" })}
-  ${tablet({ width: "100%", justifyContent: "space-around" })}
   ${laptop({ width: "100%"})}
+  ${tablet({ width: "100%", justifyContent: "space-around" })}
+  ${mobile({ width: "100%" })}
 `;
 
 const AmountContainer = styled.div`

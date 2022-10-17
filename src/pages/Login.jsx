@@ -25,14 +25,14 @@ const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
   background-color: white;
-  ${mobile({ width: "75%" })}
   ${tablet({ width: "50%" })}
+  ${mobile({ width: "75%" })}
 `;
 
 const Title = styled.h1`
   font-size: 24px;
   font-weight: 300;
-  ${tablet({ paddingBottom: "10px" })}
+  ${tablet({ paddingBottom: "20px" })}
 `;
 
 const Form = styled.form`
@@ -61,6 +61,7 @@ const Button = styled.button`
     color: green;
     cursor: not-allowed;
   }
+  ${mobile({ fontSize: "16px", padding: "10px 15px" })}
 `;
 
 const Link = styled.a`
@@ -68,6 +69,7 @@ const Link = styled.a`
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
+  ${mobile({ fontSize: "10px" })}
 `;
 
 const Error = styled.span`
