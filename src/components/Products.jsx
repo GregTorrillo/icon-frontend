@@ -6,7 +6,6 @@ import axios from "axios";
 import { mobile } from "../responsive";
 import { tablet } from "../responsive";
 import { laptop } from "../responsive";
-import Skeleton from './Skeleton';
 
 const Container = styled.div`
   padding: 0 300px 200px 300px;
@@ -28,13 +27,11 @@ const Title = styled.h1`
 `; 
 
 const Products = ({cat, filters, sort}) => {
-  const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
-      setIsLoading(true)
       try {
         const res = await axios.get(
           cat
@@ -43,7 +40,6 @@ const Products = ({cat, filters, sort}) => {
         );
         setProducts(res.data);
       } catch (err) {}
-      setIsLoading(false)
     };
     getProducts();
   }, [cat]);
@@ -79,17 +75,11 @@ const Products = ({cat, filters, sort}) => {
     <>
     <Title>LIMITED RELEASES</Title>
     <Container>
-      {isLoading ? (
-        <Skeleton />
-        ) : (
-          cat
-            ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
-            : products
-                .slice(0, 8)
-                .map((item) => <Product item={item} key={item.id} />)
-        )}
-    
-            
+    {cat
+        ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
+        : products
+            .slice(0, 8)
+            .map((item) => <Product item={item} key={item.id} />)}
   </Container>
   </>
   )
